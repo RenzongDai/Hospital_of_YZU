@@ -1,0 +1,47 @@
+<scroll-view scroll-y >
+  
+  <View class="launguage-switch">
+    <switch bindchange="Languege" checked="{{switchLanguage}}"></switch>
+  </View>
+  <view class="center" >
+    <image src="/image/regstration-icon.svg" class="registration-icon"></image>
+  </view>
+  <text class="registration-text center">{{languege.registration}}</text>
+  <text class="center registration-inf-text">{{languege.enterInf}}</text>
+ 
+  <view>
+  <form bindsubmit="registre" class="center" >
+    <view >
+      <text wx:if="{{ifEmptey.name}}" class="empty-mass"> {{languege.errorMassage.pleaseName}}</text>
+        <input  name="name" placeholder="{{languege.name}}" class="{{ifEmptey.name? 'empty-form' : 'text-bar'}}" >
+      </input>
+     
+    </view>
+    <view>
+      <text wx:if="{{ifEmptey.password}}" class="empty-mass"> {{languege.errorMassage.plaesePassword}}</text>
+        <input   name="password" placeholder="{{languege.password}}" class="{{ifEmptey.password? 'empty-form' : 'text-bar'}}"></input>
+    </view>
+    <view>
+      <text wx:if="{{ifEmptey.phone}}" class="empty-mass"> {{languege.errorMassage.pleasePhone}}</text>
+        <input type="number" name="phone" placeholder="{{languege.phone}}" class="{{ifEmptey.phone? 'empty-form' : 'text-bar'}}"
+        maxlength="11"></input>
+    </view>
+    <view>
+      <text wx:if="{{ifEmptey.nickName}}" class="empty-mass"> {{languege.errorMassage.pleaseNick}}</text>
+        <input  name="nickname"  placeholder="{{languege.nickName}}" class="{{ifEmptey.nickName ? 'empty-form' : 'text-bar'}}"></input>
+    </view>
+    <view>
+      <text wx:if="{{ifEmptey.id.lessThan}}" class="empty-mass"> {{languege.errorMassage.pleaseId.lessThan}}</text>
+      <text wx:elif="{{ifEmptey.id.empty}}" class="empty-mass"> {{languege.errorMassage.pleaseId.empty}}</text>
+        <input type="number" name="id" placeholder="{{languege.id}}" class="{{ifEmptey.id.lessThan || ifEmptey.id.empty? 'empty-form' : 'text-bar'}}"
+        maxlength="14"></input>
+    </view>
+    <text wx:if="{{ifEmptey.sex}}" class="empty-mass"> {{languege.errorMassage.pleaseSex}}</text>
+    <radio-group name="sex" bindchange="selectSex" >
+      <radio color="#7BE495" value="male"  ><text class="input-placeholder">{{languege.sex.male}}</text></radio>
+      <radio color="#7BE495" value= "femal" ><text class="input-placeholder">{{languege.sex.femal}}</text></radio>
+    </radio-group>  
+    <button  form-type="submit" >{{languege.registre}}</button>
+  </form>
+</view>
+</scroll-view>

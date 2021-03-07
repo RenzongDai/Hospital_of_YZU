@@ -1,0 +1,108 @@
+<scroll-view>
+  <text class="center title">physical conditions</text>
+<form class="center" bindsubmit="submitPhysicalCondition">
+  
+<view >
+  <view class="question"><text >Enter your hight and weiht:</text></view>
+  <input name="hight" type="number" placeholder="Hight" class="small-box "></input>
+  <text class="small-box-text">cm</text>
+  <input name="weight" type="number" placeholder="weiht" class="small-box "></input>
+  <text class="small-box-text">Kg</text> 
+</view>
+<view>
+  <view class="question"><text class="question">Have you lost weight in the last 6 months? </text></view>
+  <radio-group name="dropweight" bindchange="dropweight" >
+      <radio color="#7BE495" value="0"  ><text class="input-placeholder">Yes</text></radio>
+      <radio color="#7BE495" value= "1" ><text class="input-placeholder">No</text></radio>
+    </radio-group>  
+</view>
+
+
+<view class="question" wx:if="{{false}}">
+  <text>Your previous weight was:</text>
+  <input name="refweight" type="number" placeholder="Hight" class="small-box "></input>
+</view>
+
+<view class="question">
+  <text>Your blood type is:</text>
+  <radio-group name="blood" bindchange="dropweight" >
+    <radio color="#7BE495" value="1"  ><text class="input-placeholder">A</text></radio>
+    <radio color="#7BE495" value= "2" ><text class="input-placeholder">B</text></radio>
+    <radio color="#7BE495" value= "3" ><text class="input-placeholder">AB</text></radio>
+    <radio color="#7BE495" value= "4" ><text class="input-placeholder">O</text></radio>
+    <radio color="#7BE495" value= "9" ><text class="input-placeholder">I do not know</text></radio>
+    </radio-group>  
+</view>
+
+<view class="question">
+  <text>What is your personality like in normal times?</text>
+  <picker name="character" bindchange="bindPickerChange" value="{{index}}" range="{{personality}}">
+    <view class="picker">
+      当前选择：{{personality[index]}}
+    </view>
+  </picker>
+
+</view>
+
+<view class="question">
+  <text>Psychological pressure?</text>
+  <picker name="Psychologicalstress" bindchange="bindPickerChange" value="{{index}}" range="{{Psychological}}">
+    <view class="picker">
+      当前选择：{{Psychological[index]}}
+    </view>
+  </picker>
+</view>
+
+<view class="question">
+  <text>Do you often feel anxious?</text>
+  <radio-group name="anxiety" bindchange="dropweight" >
+    <radio color="#7BE495" value="1"  ><text class="input-placeholder">No</text></radio>
+    <radio color="#7BE495" value= "2" ><text class="input-placeholder">Yes</text></radio>
+    </radio-group>  
+</view>
+
+<view class="question">
+  <text>How do you consciously sleep every day? </text>
+  <radio-group name="Sleepquality" bindchange="dropweight" >
+    <radio color="#7BE495" value="1"  ><text class="input-placeholder">good</text></radio>
+    <radio color="#7BE495" value= "2" ><text class="input-placeholder">fair</text></radio>
+    <radio color="#7BE495" value= "3" ><text class="input-placeholder">poor</text></radio>
+  </radio-group>  
+</view>
+
+<view class="question">
+  <text>Have you ever been infected with Helicobacter pylori (HP)?</text>
+  <radio-group name="HP" bindchange="dropweight" >
+    <radio color="#7BE495" value="1"  ><text class="input-placeholder">NO</text></radio>
+    <radio color="#7BE495" value= "2" ><text class="input-placeholder">Yse</text></radio>
+    <radio color="#7BE495" value= "9" ><text class="input-placeholder">Not sure</text></radio>
+  </radio-group>  
+</view>
+
+<view class="question">
+  <text>B111 If yes, whether to receive antibacterial treatment:</text>
+  <radio-group name="isacceptHP" bindchange="dropweight" >
+    <radio color="#7BE495" value="1"  ><text class="input-placeholder">NO</text></radio>
+    <radio color="#7BE495" value= "2" ><text class="input-placeholder">Yse</text></radio>
+    <radio color="#7BE495" value= "9" ><text class="input-placeholder">unclear</text></radio>
+  </radio-group>  
+</view>
+
+
+<view class="question section">
+  <text>Psychological pressure?</text>
+  <picker name="HPtreatment" bindchange="bindPickerChange" value="{{index}}" range="{{Psychological}}">
+    <view class="picker">
+      当前选择：{{Psychological[index]}}
+    </view>
+  </picker>
+</view>
+<view class="question">
+  <textarea name="other" placeholder="Other">
+  </textarea>
+</view>
+
+
+<button  form-type="submit" >Submit</button>
+</form>
+</scroll-view>

@@ -1,0 +1,6 @@
+@import "../applicationform.wxss";
+.small-box-text{
+  font-size: 40rpx; 
+  color: #205072;
+  padding: 20rpx ;
+}

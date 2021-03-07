@@ -1,0 +1,25 @@
+<View class="launguage-switch">
+    <switch bindchange="Languege" checked="true"></switch>
+  </View>
+<view>
+  
+  <view class="center" >
+    <image src="/image/regstration-icon.svg" class="registration-icon"></image>
+  </view>
+  <text  class="center login-text ">{{languege.login}}</text>
+  <text class=" center login-inf-text" >{{languege.enterInf}}</text>
+
+  <form class="center" bindsubmit="login">
+
+    <text wx:if="{{ifEmptey.name}}" class="empty-mass"> {{languege.errorMassage.pleaseName}}</text>
+    <input type="text" placeholder="{{languege.name}}" class="{{ifEmptey.name? 'empty-form' : 'text-bar'}}"></input>
+
+    <text wx:if="{{ifEmptey.password}}" class="empty-mass"> {{languege.errorMassage.plaesePassword}}</text>
+    <input type="text" placeholder="{{languege.password}}" class="{{ifEmptey.name? 'empty-form' : 'text-bar'}}"></input>
+      <navigator class="ceter  navigator-to-sms" >{{languege.logSms}}</navigator>
+    <button form-type="submit" >{{languege.login}}</button>
+    <navigator class=" navigator-to-register " url="../registration/registration" >{{languege.registre}}</navigator>
+  </form>
+  
+  
+</view>

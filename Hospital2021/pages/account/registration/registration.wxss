@@ -1,0 +1,68 @@
+/* pages/account/registration/registration.wxss */
+.text-bar{
+  width: 500rpx;
+  border-radius: 34rpx;
+  padding: 30rpx;
+  margin: 20rpx;
+  margin-bottom: 65rpx;
+  box-shadow:34rpx 34rpx 89rpx #CDE0C9;
+}
+radio-group {
+  display: flex;
+  justify-content: space-around;
+}
+.center{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.registration-icon{
+  display: flex;
+  width: 60.75px;
+  height: 28.24px;
+}
+.registration-text{
+  margin-top: 80rpx;
+  color: #205072;
+}
+.registration-inf-text{
+  color: #68B2A0;
+  margin-top: 40rpx;
+}
+form{
+  margin-top: 80rpx;
+}
+button {
+  background-color: #7BE495; 
+  border-radius: 60rpx;
+  color: white;
+  box-shadow:34rpx 34rpx 89rpx #80817f;
+  
+  margin-bottom: 30rpx;
+  margin-top: 20rpx;
+}
+button:active {
+  box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 60rpx; 
+  
+}
+.input-placeholder{
+
+  color: #56C596;
+}
+.empty-form{
+  border-color: #F75010;
+  border-style: solid;
+  width: 500rpx;
+  border-radius: 34rpx;
+  padding: 30rpx;
+  margin: 20rpx;
+  margin-bottom: 65rpx;
+  content: icon("/image/Main App Icon.svg");
+}
+.empty-mass{
+  color:#F75010;
+}

@@ -1,0 +1,10 @@
+<svg id="Main_App_Icon" data-name="Main App Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60.753" height="28.241" viewBox="0 0 60.753 28.241">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.229" cy="0" r="1.137" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7be495"/>
+      <stop offset="1" stop-color="#329d9c"/>
+    </radialGradient>
+  </defs>
+  <path id="Plus-1" d="M17.2,25.249V22.676a5.579,5.579,0,0,1,5.593-5.564H25.38a2.992,2.992,0,1,0,0-5.984H22.794A5.579,5.579,0,0,1,17.2,5.564V2.992a3.007,3.007,0,0,0-6.015,0V5.564a5.579,5.579,0,0,1-5.593,5.564H3.007a2.992,2.992,0,1,0,0,5.984H5.593a5.579,5.579,0,0,1,5.593,5.564v2.572a3.007,3.007,0,0,0,6.015,0Z" fill="url(#radial-gradient)"/>
+  <path id="Plus-2" d="M17.2,25.249V22.676a5.579,5.579,0,0,1,5.593-5.564H25.38a2.992,2.992,0,1,0,0-5.984H22.794A5.579,5.579,0,0,1,17.2,5.564V2.992a3.007,3.007,0,0,0-6.015,0V5.564a5.579,5.579,0,0,1-5.593,5.564H3.007a2.992,2.992,0,1,0,0,5.984H5.593a5.579,5.579,0,0,1,5.593,5.564v2.572a3.007,3.007,0,0,0,6.015,0Z" transform="translate(32.367)" fill="url(#radial-gradient)"/>
+</svg>

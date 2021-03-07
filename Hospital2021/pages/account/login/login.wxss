@@ -1,0 +1,34 @@
+@import "../registration/registration.wxss";
+.login-text
+{
+  margin-top: 80rpx;
+  color:  #68B2A0;
+  font-size: 30rpx;
+}
+.login-inf-text
+{
+  color: #205072;
+  margin-top: 40rpx;
+  font-size: 20rpx;
+
+}
+.navigator-hover{
+  color: red;
+}
+.navigator-to-sms{
+  color: #205072;
+  font-size: 20rpx;
+}
+.navigator-to-register{
+  background-color: rgb(141, 150, 144); 
+  border-radius: 60rpx;
+  color: white;
+  box-shadow:34rpx 34rpx 89rpx #80817f;
+  margin-bottom: 20rpx;
+  margin-top: 40rpx;
+  padding: 20rpx;
+  width: 120rpx;
+  height: 32rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
