@@ -1,0 +1,11 @@
+@import "../account/registration/registration.wxss";
+image{
+  width: 390rpx;
+  height: 590rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+.singIn{
+  display: inline-block;
+  font-size: 20rpx;
+}

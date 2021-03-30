@@ -1,0 +1,15 @@
+<!--pages/enterapp/enterapp.wxml-->
+<view class="center" >
+    <image src="/image/regstration-icon.svg" class="registration-icon"></image>
+  </view>
+  <text class="registration-text center">欢迎来到</text>
+  <text class="center registration-inf-text">扬州市消化内镜</text>
+<view class="center">
+<image src="/image/Doctor.png"></image>
+</view>
+<button bindtap="registerButton">开始吧</button>
+<view class="center">
+<text class="singIn">已经有帐号了？</text>
+<navigator url="../account/login/login" >登入</navigator>
+</view>
+
