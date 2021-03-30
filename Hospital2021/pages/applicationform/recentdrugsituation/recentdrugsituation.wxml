@@ -1,0 +1,75 @@
+<scroll-view>
+  <text class="center title">最近的药物状况</text>
+<form class="center" bindsubmit="submitRecentdrugsituation">
+  
+  <view>
+  <view class="question"><text >近3个月有无服用阿司匹林？ </text></view>
+  <radio-group name="Aspirin" bindchange="Aspirin" >
+      <radio color="#7BE495" value="1"  ><text class="input-placeholder">是</text></radio>
+      <radio color="#7BE495" value= "0" ><text class="input-placeholder">否</text></radio>
+    </radio-group>
+</view>
+
+<view  wx:if="{{aspirin === '1' ? true : fauls}}" class="question section">
+  <text>近3个月阿司匹林服用频率:</text>
+  <picker name="AspirinCR" bindchange="bindAspirinCRChange" value="{{index}}" range="{{AspirinCR}}">
+    <view class="picker">
+      当前选择：{{AspirinCR[index1]}}
+    </view>
+  </picker>
+</view>
+
+<view class="question">
+  <view><text>近3个月有无服用其他非甾体抗炎药？</text></view>
+  <radio-group name="NonSteroidalAntiInflammatory"  >
+      <radio color="#7BE495" value="1"  ><text class="input-placeholder">是</text></radio>
+      <radio color="#7BE495" value= "0" ><text class="input-placeholder">否</text></radio>
+    </radio-group>
+</view>
+
+<view>
+  <view class="question"><text >近3个月有无服用糖皮质激素类的药物？ </text></view>
+  <radio-group name="Glucocorticoids" bindchange="Glucocorticoids" >
+      <radio color="#7BE495" value="1"  ><text class="input-placeholder">是</text></radio>
+      <radio color="#7BE495" value= "0" ><text class="input-placeholder">否</text></radio>
+    </radio-group>
+</view>
+
+<view  wx:if="{{glucocorticoids === '1' ? true : fauls}}" class="question section">
+  <text>近3个月糖皮质激素类服用频率:</text>
+  <picker name="GlucocorticoidsCR" bindchange="bindGlucocorticoidsCRChange" value="{{index}}" range="{{GlucocorticoidsCR}}">
+    <view class="picker">
+      当前选择：{{GlucocorticoidsCR[index2]}}
+    </view>
+  </picker>
+</view>
+
+<view class="question">
+  <view><text>近1个月是否服用抗生素类药物？</text></view>
+  <radio-group name="Antibiotics"  >
+      <radio color="#7BE495" value="1"  ><text class="input-placeholder">是</text></radio>
+      <radio color="#7BE495" value= "0" ><text class="input-placeholder">否</text></radio>
+    </radio-group>
+</view>
+
+<view class="question">
+  <view><text>近1个月是否服用铋剂类药物？</text></view>
+  <radio-group name="Tincture"  >
+      <radio color="#7BE495" value="1"  ><text class="input-placeholder">是</text></radio>
+      <radio color="#7BE495" value= "0" ><text class="input-placeholder">否</text></radio>
+    </radio-group>
+</view>
+
+<view class="question">
+  <view><text>近1个月有无服用质子泵抑制剂药(PPI)？</text></view>
+  <radio-group name="PPI"  >
+      <radio color="#7BE495" value="1"  ><text class="input-placeholder">是</text></radio>
+      <radio color="#7BE495" value= "0" ><text class="input-placeholder">否</text></radio>
+    </radio-group>
+</view>
+
+
+
+<button  form-type="submit" >Submit</button>
+</form>
+</scroll-view>

@@ -1,0 +1,101 @@
+<!--pages/applicationform/disease/disease.wxml-->
+<scroll-view>
+  <text class="center title">疾病</text>
+<form class="center" bindsubmit="submitDisease">
+  
+<view class="question section">
+  <view><text>您有任何疾病史吗？</text></view>
+<radio-group name="disease" bindchange="bindDiseaseChange">
+      <radio color="#7BE495" value="0"  ><text class="input-placeholder">无</text></radio>
+      <radio color="#7BE495" value= "1" ><text class="input-placeholder">有</text></radio> 
+    </radio-group>
+</view>
+<view  wx:if="{{disease == '1'   ? true : fauls}}" class="question section">
+  <view><text>你有心血管病吗？</text></view>
+  <radio-group name="cardiovascular">
+      <radio color="#7BE495" value="0"  ><text class="input-placeholder">无</text></radio>
+      <radio color="#7BE495" value= "1" ><text class="input-placeholder">有</text></radio> 
+    </radio-group>
+
+    <view><text>你有呼吸困难吗？</text></view>
+  <radio-group name="breathing">
+      <radio color="#7BE495" value="0"  ><text class="input-placeholder">无</text></radio>
+      <radio color="#7BE495" value= "1" ><text class="input-placeholder">有</text></radio> 
+    </radio-group>
+
+    <view><text>您是否患有某种疾病：泌尿，生殖，新陈代谢？</text></view>
+  <radio-group name="ago">
+      <radio color="#7BE495" value="0"  ><text class="input-placeholder">无</text></radio>
+      <radio color="#7BE495" value= "1" ><text class="input-placeholder">有</text></radio> 
+    </radio-group>
+
+    <view><text>您是否患有某种疾病：运动和其他疾病？</text></view>
+  <radio-group name="SportsOthers">
+      <radio color="#7BE495" value="0"  ><text class="input-placeholder">无</text></radio>
+      <radio color="#7BE495" value= "1" ><text class="input-placeholder">有</text></radio> 
+    </radio-group>
+
+    <view><text>具体疾病(判断有无疾病史，有就填入该字段)</text></view>
+    <view>
+  <textarea name="specifics" placeholder="在此输入">
+  </textarea>
+     </view>
+</view>
+
+<view class="question section">
+  <view><text>您有胃癌家族史吗？</text></view>
+<radio-group name="gastric" bindchange="bindGastricChange">
+      <radio color="#7BE495" value="0"  ><text class="input-placeholder">无</text></radio>
+      <radio color="#7BE495" value= "1" ><text class="input-placeholder">有</text></radio> 
+    </radio-group>
+</view>
+
+<view  wx:if="{{gastric == '1'   ? true : fauls}}" class="question section">
+  <view><text>具体胃癌家族史(同上)</text></view>
+    <view>
+  <textarea name="specificgastric" placeholder="在此输入">
+  </textarea>
+    </view>
+</view>
+
+
+
+<view class="question section">
+  <view><text>您有任何药物过敏史吗？</text></view>
+<radio-group name="allergy" bindchange="bindAllergyChange">
+      <radio color="#7BE495" value="0"  ><text class="input-placeholder">无</text></radio>
+      <radio color="#7BE495" value= "1" ><text class="input-placeholder">有</text></radio> 
+    </radio-group>
+</view>
+
+<view  wx:if="{{allergy == '1'   ? true : fauls}}" class="question section">
+  <view><text>具体药物过敏史(同上)</text></view>
+    <view>
+  <textarea name="specificallergy" placeholder="在此输入">
+  </textarea>
+    </view>
+</view>
+
+
+
+<view class="question section">
+  <view><text>你有什么根除Hp的治疗方法吗？</text></view>
+<radio-group name="Hptherapy" bindchange="bindHptherapyChange">
+      <radio color="#7BE495" value="0"  ><text class="input-placeholder">无</text></radio>
+      <radio color="#7BE495" value= "1" ><text class="input-placeholder">有</text></radio> 
+    </radio-group>
+</view>
+
+<view  wx:if="{{Hptherapy == '1'   ? true : fauls}}" class="question section">
+  <view><text>具体Hp根除治疗(同上)</text></view>
+    <view>
+  <textarea name="specificHptherapy" placeholder="在此输入">
+  </textarea>
+  </view>
+</view>
+
+<button  form-type="submit" >Submit</button>
+</form>
+</scroll-view>
+
+

@@ -1,0 +1,112 @@
+<scroll-view>
+  <text class="center title">个人历史</text>
+<form class="center" bindsubmit="submitPersonalhistory">
+  
+<view class="question section">
+  <text>近3个月阿司匹林服用频率:</text>
+  <picker name="whetherSmoking" bindchange="bindWhetherSmokingChange" value="{{index}}" range="{{whetherSmoking}}">
+    <view class="picker">
+      当前选择：{{whetherSmoking[index1]}}
+    </view>
+  </picker>
+</view>
+
+<view  wx:if="{{index1 == 1 || index1 == 2  ? true : fauls}}" class="question section">
+  <view><text >每天吸烟</text></view>
+  <input name="smokingPerDay" type="number" placeholder="量/支" class="small-box"></input>
+
+  <view><text >规律吸烟/支 吸烟或者已经戒烟都有的字段</text></view>
+  <input name="regularSmoking" type="number" placeholder="量/支" class="small-box"></input>
+
+  <view><text >戒烟前每天吸烟量</text></view>
+  <input name="regularsmokingbefore" type="number" placeholder="量/支" class="small-box"></input>
+
+  <view><text >规律吸烟多少年</text></view>
+  <input name="rgbefore" type="number" placeholder="年" class="small-box"></input>
+
+  <view><text >戒烟年龄</text></view>
+  <input name="smokingCessationAge" type="number" placeholder="岁" class="small-box"></input>
+
+  <view><text >戒烟共</text></view>
+  <input name="yearsOfSmokingCessation" type="number" placeholder="年" class="small-box"></input>
+
+  <view><text>您在家或者单位是否存在被动吸烟？ </text></view>
+  <radio-group name="passiveSmoking" >
+      <radio color="#7BE495" value="1"  ><text class="input-placeholder">是</text></radio>
+      <radio color="#7BE495" value= "0" ><text class="input-placeholder">否</text></radio>
+    </radio-group>
+</view>
+
+<view class="question section">
+  <text>您生病前是否饮酒:</text>
+  <picker name="whetherDrinkingAlcohol" bindchange="bindWhetherDrinkingAlcoholChange" value="{{index}}" range="{{whetherDrinkingAlcohol}}">
+    <view class="picker">
+      当前选择：{{whetherDrinkingAlcohol[index2]}}
+    </view>
+  </picker>
+</view>
+
+<view  wx:if="{{index2 == 0 || index2 == null ? fauls : true}}" class="question section">
+  <view><text >始规律饮酒年龄</text></view>
+  <input name="startRegularDrinkingAge" type="number" placeholder="年龄" class="small-box"></input>
+
+  <view><text >规律饮酒年数</text></view>
+  <input name="regularDrinking" type="number" placeholder="年" class="small-box"></input>
+
+
+  <view><text >每次饮酒量：</text></view>
+  <input name="drinkingAmountEachTime" type="number" placeholder="两" class="small-box"></input>
+
+  <view><text>您生病前是否饮酒:</text></view>
+  <picker name="drinkingReaction" bindchange="bindDrinkingReactionChange" value="{{index}}" range="{{drinkingReaction}}">
+    <view class="picker">
+      当前选择：{{drinkingReaction[index3]}}
+    </view>
+  </picker>
+</view>
+
+<view class="question section">
+  <view><text>您一日三餐是否规律:</text></view>
+  <picker name="eatingRegularly" bindchange="bindEatingRegularlyChange" value="{{index}}" range="{{eatingRegularly}}">
+    <view class="picker">
+      当前选择：{{eatingRegularly[index4]}}
+    </view>
+  </picker>
+
+<view><text>进食速度：</text></view>
+<radio-group name="eatingSpeed" >
+      <radio color="#7BE495" value="1"  ><text class="input-placeholder">慢</text></radio>
+      <radio color="#7BE495" value= "2" ><text class="input-placeholder">速度正常</text></radio>
+      <radio color="#7BE495" value= "3" ><text class="input-placeholder">过快</text></radio>
+    </radio-group>
+
+    <view><text>进食习惯：</text></view>
+      <radio-group name="eatingHabit" >
+      <radio color="#7BE495" value="1"  ><text class="input-placeholder">过冷</text></radio>
+      <radio color="#7BE495" value= "2" ><text class="input-placeholder">温度适中</text></radio>
+      <radio color="#7BE495" value= "3" ><text class="input-placeholder">过烫</text></radio>
+    </radio-group>
+
+    <view><text>您是否经常饮茶？(每周至少三杯,持续六个月以上)</text></view>
+  <picker name="whetherDrinkTeaRegularly" bindchange="bindWhetherDrinkTeaRegularlyChange" value="{{index}}" range="{{whetherDrinkTeaRegularly}}">
+    <view class="picker">
+      当前选择：{{whetherDrinkTeaRegularly[index5]}}
+    </view>
+  </picker>
+
+  <view><text >您经常饮茶共有多少年了？</text></view>
+  <input name="yearsOfTeaDrinking" type="number" placeholder="年" class="small-box"></input>
+
+  <view><text>您喜欢喝浓茶还是淡茶？</text></view>
+      <radio-group name="strongOrLightTea" >
+      <radio color="#7BE495" value="1"  ><text class="input-placeholder">淡茶</text></radio>
+      <radio color="#7BE495" value= "2" ><text class="input-placeholder">适中</text></radio>
+      <radio color="#7BE495" value= "3" ><text class="input-placeholder">浓茶</text></radio>
+    </radio-group>
+
+</view>
+
+<button  form-type="submit" >Submit</button>
+</form>
+</scroll-view>
+

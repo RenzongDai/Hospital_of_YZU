@@ -1,0 +1,29 @@
+<!--pages/applicationform/familyhistory/familyhistory.wxml-->
+<scroll-view>
+  <text class="center title">家史</text>
+<form class="center" bindsubmit="submitFamilyhistory">
+  
+
+<view  class="question section">
+  <view><text >您一共有几个儿子？</text></view>
+  <input name="numofson" type="number" placeholder="个" class="small-box"></input>
+
+  <view><text >您一共有几个女儿？</text></view>
+  <input name="numofdaughter" type="number" placeholder="个" class="small-box"></input>
+
+  <view><text >您一共有几个兄弟？（不包括您本人）</text></view>
+  <input name="numofbro" type="number" placeholder="个" class="small-box"></input>
+
+  <view><text >您一共有几个姐妹？（不包括您本人）</text></view>
+  <input name="numofsister" type="number" placeholder="个" class="small-box"></input>
+
+  <view><text>您的亲属中，有没有人曾经被医生诊断过患有消化道肿瘤或者其它肿瘤？ </text></view>
+  <radio-group name="hasTumor" >
+      <radio color="#7BE495" value="0"  ><text class="input-placeholder">无</text></radio>
+      <radio color="#7BE495" value= "1" ><text class="input-placeholder">有</text></radio>
+    </radio-group>
+</view>
+
+<button  form-type="submit" >Submit</button>
+</form>
+</scroll-view>

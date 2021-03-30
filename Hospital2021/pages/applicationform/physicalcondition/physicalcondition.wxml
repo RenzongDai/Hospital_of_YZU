@@ -1,99 +1,98 @@
 <scroll-view>
-  <text class="center title">physical conditions</text>
+  <text class="center title">身体状况</text>
 <form class="center" bindsubmit="submitPhysicalCondition">
   
 <view >
-  <view class="question"><text >Enter your hight and weiht:</text></view>
-  <input name="hight" type="number" placeholder="Hight" class="small-box "></input>
+  <view class="question"><text >输入身高和体重：</text></view>
+  <input name="hight" type="number" placeholder="高" class="small-box "></input>
   <text class="small-box-text">cm</text>
-  <input name="weight" type="number" placeholder="weiht" class="small-box "></input>
+  <input name="weight" type="number" placeholder="奉献" class="small-box "></input>
   <text class="small-box-text">Kg</text> 
 </view>
 <view>
-  <view class="question"><text class="question">Have you lost weight in the last 6 months? </text></view>
+  <view class="question"><text class="question">在过去的6个月中，您减肥了吗？ </text></view>
   <radio-group name="dropweight" bindchange="dropweight" >
-      <radio color="#7BE495" value="0"  ><text class="input-placeholder">Yes</text></radio>
-      <radio color="#7BE495" value= "1" ><text class="input-placeholder">No</text></radio>
-    </radio-group>  
-</view>
-
-
-<view class="question" wx:if="{{false}}">
-  <text>Your previous weight was:</text>
-  <input name="refweight" type="number" placeholder="Hight" class="small-box "></input>
+      <radio color="#7BE495" value="1"  ><text class="input-placeholder">是</text></radio>
+      <radio color="#7BE495" value= "0" ><text class="input-placeholder">否</text></radio>
+    </radio-group>
+    <view wx:if="{{dropweight === '1' ? true : fauls}}">
+      <view class="question"><text class="question">您以前体重为： </text></view>
+      <input name="refweight" type="number" placeholder="奉献" class="small-box "></input>
+      <text class="small-box-text">Kg</text> 
+    </view>    
 </view>
 
 <view class="question">
-  <text>Your blood type is:</text>
-  <radio-group name="blood" bindchange="dropweight" >
+  <text>您的血型为：</text>
+  <radio-group name="blood" >
     <radio color="#7BE495" value="1"  ><text class="input-placeholder">A</text></radio>
     <radio color="#7BE495" value= "2" ><text class="input-placeholder">B</text></radio>
     <radio color="#7BE495" value= "3" ><text class="input-placeholder">AB</text></radio>
     <radio color="#7BE495" value= "4" ><text class="input-placeholder">O</text></radio>
-    <radio color="#7BE495" value= "9" ><text class="input-placeholder">I do not know</text></radio>
+    <radio color="#7BE495" value= "9" ><text class="input-placeholder">不清楚</text></radio>
     </radio-group>  
 </view>
 
 <view class="question">
-  <text>What is your personality like in normal times?</text>
-  <picker name="character" bindchange="bindPickerChange" value="{{index}}" range="{{personality}}">
+  <text>平时您的性格怎么样?</text>
+  <picker name="character" bindchange="bindcharacterChange" value="{{index}}" range="{{personality}}">
     <view class="picker">
-      当前选择：{{personality[index]}}
+      当前选择：{{personality[index1]}}
     </view>
   </picker>
 
 </view>
 
 <view class="question">
-  <text>Psychological pressure?</text>
-  <picker name="Psychologicalstress" bindchange="bindPickerChange" value="{{index}}" range="{{Psychological}}">
+  <text>心理压力?</text>
+  <picker name="Psychologicalstress" bindchange="bindPsychologicalstressChange" value="{{index}}" range="{{Psychological}}">
     <view class="picker">
-      当前选择：{{Psychological[index]}}
+      当前选择：{{Psychological[index2]}}
     </view>
   </picker>
 </view>
 
 <view class="question">
-  <text>Do you often feel anxious?</text>
+  <text>您平时会时常感到焦虑吗？</text>
   <radio-group name="anxiety" bindchange="dropweight" >
-    <radio color="#7BE495" value="1"  ><text class="input-placeholder">No</text></radio>
-    <radio color="#7BE495" value= "2" ><text class="input-placeholder">Yes</text></radio>
+    <radio color="#7BE495" value="1"  ><text class="input-placeholder">否</text></radio>
+    <radio color="#7BE495" value= "2" ><text class="input-placeholder">是</text></radio>
     </radio-group>  
 </view>
 
 <view class="question">
-  <text>How do you consciously sleep every day? </text>
-  <radio-group name="Sleepquality" bindchange="dropweight" >
-    <radio color="#7BE495" value="1"  ><text class="input-placeholder">good</text></radio>
-    <radio color="#7BE495" value= "2" ><text class="input-placeholder">fair</text></radio>
-    <radio color="#7BE495" value= "3" ><text class="input-placeholder">poor</text></radio>
+  <text>您自觉每天的睡眠质量？ </text>
+  <radio-group name="Sleepquality">
+    <radio color="#7BE495" value="1"  ><text class="input-placeholder">好</text></radio>
+    <radio color="#7BE495" value= "2" ><text class="input-placeholder">一般</text></radio>
+    <radio color="#7BE495" value= "3" ><text class="input-placeholder">差</text></radio>
   </radio-group>  
 </view>
 
 <view class="question">
-  <text>Have you ever been infected with Helicobacter pylori (HP)?</text>
-  <radio-group name="HP" bindchange="dropweight" >
-    <radio color="#7BE495" value="1"  ><text class="input-placeholder">NO</text></radio>
-    <radio color="#7BE495" value= "2" ><text class="input-placeholder">Yse</text></radio>
-    <radio color="#7BE495" value= "9" ><text class="input-placeholder">Not sure</text></radio>
+  <text>您曾经是否感染幽门螺杆菌（HP）?</text>
+  <radio-group name="HP"  >
+    <radio color="#7BE495" value="1"  ><text class="input-placeholder">否</text></radio>
+    <radio color="#7BE495" value= "2" ><text class="input-placeholder">是</text></radio>
+    <radio color="#7BE495" value= "9" ><text class="input-placeholder">不清楚</text></radio>
   </radio-group>  
 </view>
 
 <view class="question">
-  <text>B111 If yes, whether to receive antibacterial treatment:</text>
-  <radio-group name="isacceptHP" bindchange="dropweight" >
-    <radio color="#7BE495" value="1"  ><text class="input-placeholder">NO</text></radio>
-    <radio color="#7BE495" value= "2" ><text class="input-placeholder">Yse</text></radio>
-    <radio color="#7BE495" value= "9" ><text class="input-placeholder">unclear</text></radio>
+  <text>B111若是，是否接受抗菌治疗：</text>
+  <radio-group name="isacceptHP" bindchange="bindisacceptHP" >
+    <radio color="#7BE495" value="1"  ><text class="input-placeholder">否</text></radio>
+    <radio color="#7BE495" value= "2" ><text class="input-placeholder">是</text></radio>
+    <radio color="#7BE495" value= "9" ><text class="input-placeholder">不清楚</text></radio>
   </radio-group>  
 </view>
 
 
-<view class="question section">
-  <text>Psychological pressure?</text>
-  <picker name="HPtreatment" bindchange="bindPickerChange" value="{{index}}" range="{{Psychological}}">
+<view  wx:if="{{isacceptHP === '2' ? true : fauls}}" class="question section">
+  <text>	HPtreatment:</text>
+  <picker name="HPtreatment" bindchange="bindHPtreatmentChange" value="{{index}}" range="{{HPtreatment}}">
     <view class="picker">
-      当前选择：{{Psychological[index]}}
+      当前选择：{{HPtreatment[index3]}}
     </view>
   </picker>
 </view>
