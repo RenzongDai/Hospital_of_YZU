@@ -1,10 +1,16 @@
 {
   "pages": [
+    "pages/enterapp/enterapp",
     "pages/index/index",
     "pages/logs/logs",
     "pages/account/registration/registration",
     "pages/account/login/login",
-    "pages/applicationform/physicalcondition/physicalcondition"
+    "pages/applicationform/physicalcondition/physicalcondition",
+    "pages/home/home",
+    "pages/applicationform/recentdrugsituation/recentdrugsituation",
+    "pages/applicationform/personalhistory/personalhistory",
+    "pages/applicationform/disease/disease",
+    "pages/applicationform/familyhistory/familyhistory"
   ],
   "window": {
     "backgroundTextStyle": "light",
